@@ -1,0 +1,25 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+main()
+{
+
+    int summ;
+    string frase;
+
+
+    cout << "Input frase: " << endl;
+    getline(cin, frase);
+
+    summ = 0;
+
+    for (int i = 0; i < frase.length(); i++)
+        if (isdigit(frase[i])) summ++;
+
+
+    cout << "Numbers in frase = " << summ;
+
+    getch();
