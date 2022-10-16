@@ -1,0 +1,15 @@
+# include <iostream>
+# include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string SizeOfText;
+    getline(cin, SizeOfText);
+
+    cout << SizeOfText.length() << endl;
+    _getch();
+    return 0;
+}
