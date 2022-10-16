@@ -4,7 +4,7 @@
 
 using namespace std;
 
-main()
+int main()
 {
 
     int summ;
@@ -20,6 +20,7 @@ main()
         if (isdigit(frase[i])) summ++;
 
 
-    cout << "Numbers in frase = " << summ;
+    cout << summ;
 
-    getch();
+
+}
