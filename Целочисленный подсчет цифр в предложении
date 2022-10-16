@@ -1,26 +1,12 @@
-#include <iostream>
-#include <conio.h>
-#include <string>
+#include < iostream >
+#include < string >
+#include < cctype >
+#include < algorithm >
 
 using namespace std;
 
-int main()
-{
-
-    int summ;
-    string frase;
-
-
-    cout << "Input frase: " << endl;
-    getline(cin, frase);
-
-    summ = 0;
-
-    for (int i = 0; i < frase.length(); i++)
-        if (isdigit(frase[i])) summ++;
-
-
-    cout << summ;
-
-
+int main() {
+	string s; cout << "string:"; getline(cin, s);
+	cout << count_if(s.begin(), s.end(), static_cast<int(*)(int)>(isdigit)) << endl;
+	return 0;
 }
