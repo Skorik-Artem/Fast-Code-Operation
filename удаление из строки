@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+using namespace std;
+int main() {
+    string s;
+    cin >> s;
+    string chars = "l";
+            for (char c : chars) {
+                s.erase(std::remove(s.begin(), s.end(), c), s.end());
+            }
+
+        std::cout << s;
+
+        return 0;
+}
+//говнокод
