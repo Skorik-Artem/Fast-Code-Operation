@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string str;
+    getline(cin, str);
+
+    bool size = (str.size() >= 8);
+    char ENG[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    cout << (size && ENG ? "YES" : "NO");
+
+    return 0;
+}
