@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+struct Point
+{
+    double x, y;
+    void read()
+    {
+        cin >> x >> y;
+    }
+};
+
+struct Rectangle
+{
+    Point left_btm, right_top;
+    void read()
+    {
+        left_btm.read();
+        right_top.read();
+    }
+    bool is_inside(const Point& p) const
+    {
+        return
+            left_btm.x <= p.x &&
+            p.x <= right_top.x &&
+            left_btm.y <= p.y &&
+            p.y <= right_top.y;
+    }
+};
+
+
+int main() {
+    Rectangle rec;
+    rec.read();
+    Point p;
+    p.read();
+    if (rec.is_inside(p)) cout << "YES";
+    else cout << "NO";
+    return 0;
+}
