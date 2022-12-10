@@ -1,0 +1,26 @@
+// version 0.2
+#include <iostream>;
+#include <ctime>;
+using namespace std;
+int main() {
+	srand(time(0));
+	unsigned short Passwoeds, Characters;
+	char russia[] = { 'A', 'a', 'B', 'b', 'C', 'c', 'D','d', 'E','e','F','f','G','g','H','h','I','i','J','j','K','k','L','l','M','m','N','n','O','o','P','p','Q','q','R','r','S','s','T','t','U','u','V','v','W','w','X','x','Y','y','Z','z','0','1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+	cout << "kol-vo paroley:";
+	cin >> Passwoeds;
+	cout << "Количество чисел в пароле: ";
+	cin >> Characters;
+	const unsigned short saveCharacters = Characters;
+
+	for (; Passwoeds > 0; Passwoeds--) {
+		for (; Characters > 0; Characters--) {
+			cout << russia[rand() % 62 + 0];
+		}
+		if (Characters == 0) {
+			Characters = saveCharacters;
+			cout << endl;
+		}
+	}
+	return 0;
+}
