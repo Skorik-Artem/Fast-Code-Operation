@@ -1,0 +1,11 @@
+#include <cmath>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int D, G; // число и степень возведения
+	cin >> D >> G;
+	double a = D, b = G;
+	cout << pow(a, b);
+	cin.get();
+}
